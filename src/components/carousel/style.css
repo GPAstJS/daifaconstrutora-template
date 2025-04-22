@@ -1,0 +1,18 @@
+@keyframes moveY {
+
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 100;
+    }
+
+}
+
+.animation-div {
+    animation-name: moveY;
+    animation-duration: 1.5s;
+}
