@@ -2,17 +2,20 @@ import './App.css';
 import { CTA } from './components/cta';
 import { Nav } from './components/nav';
 
+import Logo from './assets/ultraconstrutora-logo.png';
 import SeuConteudo from './assets/image.jpg';
+import { Carousel } from './components/carousel/carousel';
 import { HeroSection } from './components/section';
 import { Form } from './components/form';
-import { Carousel } from './components/carousel/carousel';
 
 import CTA1 from './assets/CTA-image1.jpg';
 import CTA2 from './assets/CTA-image2.jpg';
 import CTA3 from './assets/CTA-image3.jpg';
 import CTA4 from './assets/CTA-image4.jpg';
 
-import Logo from './assets/ultraconstrutora-logo.png';
+import { FaCrosshairs } from 'react-icons/fa';
+import { FaBinoculars } from 'react-icons/fa';
+import { FaCertificate } from 'react-icons/fa6';
 
 function App() {
     const CTAs = [
@@ -35,6 +38,24 @@ function App() {
             image: CTA4,
             title: 'Gestão de Obras',
             text: 'Gestão de obra é o planejamento, coordenação e supervisão de todas as etapas de um projeto de construção. Envolve o controle de custos, prazos, recursos humanos e materiais, com o objetivo de garantir a conclusão do projeto dentro dos parâmetros de qualidade, segurança e prazo estabelecidos.',
+        },
+    ];
+
+    const heroes = [
+        {
+            icon: <FaCrosshairs className="w-[50px] h-[50px] fill-[#2B7FFF]" />,
+            title: 'Missão',
+            text: "A missão da Ultra Construtora é 'Construir sonhos, transformar espaços e superar expectativas. Certificamos de entregar projetos de construção de alta qualidade, com foco na excelência, sustentabilidade e satisfação do cliente'.",
+        },
+        {
+            icon: <FaBinoculars className="w-[50px] h-[50px] fill-[#2B7FFF]" />,
+            title: 'Visão',
+            text: "A visão da Daifa Construtora é 'Ser reconhecida como a construtora de referência na nossa região, destacando-nos pela inovação, qualidade superior e compromisso com a comunidade. Queremos ser líderes no setor, inspirando confiança e deixando um legado de excelência e sustentabilidade em cada empreendimento que realizamos.'",
+        },
+        {
+            icon: <FaCertificate className="w-[50px] h-[50px] fill-[#2B7FFF]" />,
+            title: 'Valores',
+            text: 'Ética, Integridade, Compromisso com a Qualidade, Excelência no Serviço ao Cliente, Inovação, Sustentabilidade, Parceria com a Comunidade',
         },
     ];
 
@@ -90,9 +111,15 @@ function App() {
                 </div>
 
                 <div className="flex w-full flex-col xl:w-[50%] items-center md:items-center justify-center py-[50px] gap-y-[50px]">
-                    <HeroSection />
-                    <HeroSection />
-                    <HeroSection />
+                    {heroes.map((e, i) => {
+                        return (
+                            <HeroSection
+                                icon={e.icon}
+                                title={e.title}
+                                text={e.text}
+                            />
+                        );
+                    })}
                 </div>
             </div>
 
