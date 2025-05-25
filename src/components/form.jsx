@@ -3,10 +3,9 @@ import { FaFacebook, FaInstagram, FaWhatsapp, FaMailBulk } from 'react-icons/fa'
 export const Form = () => {
     return (
         <form
-            id="form"
-            className="scroll-m-[8rem] w-full flex flex-col items-center justify-center bg-black py-[35px]"
+            className=" w-full flex flex-col items-center justify-center bg-black py-[35px]"
         >
-            <p className="font-poppins text-[1.5rem] sm:text-[40px] font-bold bg-blue-500 px-[15px] rounded-[3px] text-white">
+            <p id='form' className="scroll-m-[10rem] font-poppins text-[1.5rem] sm:text-[40px] font-bold bg-blue-500 px-[15px] rounded-[3px] text-white">
                 CONTATO
             </p>
 
