@@ -1,11 +1,9 @@
 import React from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
-
 import './style.css';
+
+import SwiperImage from '../../assets/swiper-image.jpg';
 
 export const Carousel = () => {
     return (
@@ -14,24 +12,23 @@ export const Carousel = () => {
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
-                className="mySwiper"
+                className="mySwiper w-full"
             >
-                <SwiperSlide className="mt-[140px] ">
-                    <div className="w-full bg-blue-600 flex flex-col items-center justify-center h-[700px] ">
-                        <div className="animation-div w-[95%] md:w-full bg-transparent flex flex-col items-center justify-center gap-y-[15px]">
-                            <p className="text-[60px] text-white font-poppins font-bold ">
-                                Text Here
+                <SwiperSlide className="mt-[140px] z-99">
+                    <div className="w-full bg-[#2F163B] flex flex-col items-center justify-center h-[450px] sm:h-[700px] ">
+                        <div className="animation-div px-[1rem]  md:w-[95%]  bg-transparent flex flex-col items-center justify-center gap-y-[15px]">
+                            <p className="text-[2rem] md:text-[2.5rem]  text-white font-poppins font-bold ">
+                                Construa seu imóvel na planta
                             </p>
-                            <p className="font-montserrat  text-white text-[20px] max-w-[1200px]">
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Harum officia, suscipit corrupti obcaecati
-                                aliquid eaque laudantium sapiente eius magnam
-                                veritatis facilis minus beatae libero voluptas,
-                                adipisci pariatur nihil animi eveniet!
+                            <p className="font-montserrat  text-white text-[1rem] md:text-[1.25rem] lg:text-[20px] max-w-[1200px]       ">
+                                Nosso compromisso é oferecer um serviço de alta
+                                qualidade com agilidade, buscando sempre os melhores
+                                resultados no menor tempo possível e priorizando a
+                                relação custo-benefício ideal para o seu imóvel.
                             </p>
 
                             <a
-                                className="w-[170px] h-[43px] bg-yellow-500 hover:bg-transparent duration-300 hover:text-white flex items-center justify-center border-white border-[2px] font-poppins font-bold text-[16px]"
+                                className="w-[170px] h-[43px] bg-blue-500 hover:bg-transparent duration-300 hover:text-white flex items-center justify-center border-white border-[2px] font-poppins font-bold text-[16px]"
                                 href="#"
                             >
                                 FALE CONOSCO
@@ -39,27 +36,31 @@ export const Carousel = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide className="mt-[112px]">
-                    <div className="w-full bg-[#2F163B] flex flex-col items-center justify-center h-[700px] ">
-                        <div className="animation-div   w-[95%] md:w-full  bg-transparent flex flex-col items-center justify-center gap-y-[15px]">
-                            <p className="text-[60px] text-white font-poppins font-bold ">
-                                Text Here
-                            </p>
-                            <p className="font-montserrat text-white text-[20px] max-w-[1200px]">
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Harum officia, suscipit corrupti obcaecati
-                                aliquid eaque laudantium sapiente eius magnam
-                                veritatis facilis minus beatae libero voluptas,
-                                adipisci pariatur nihil animi eveniet!
-                            </p>
+                <SwiperSlide className="w-full flex items-center justify-center relative mt-[140px] ">
+                    <div
+                        style={{
+                            backgroundImage: `url(${SwiperImage})`,
+                        }}
+                        className={`scale-animation w-full flex items-center justify-center  h-[700px]  absolute z-[-10] top-0 left-0 bg-no-repeat`}
+                    ></div>
 
-                            <a
-                                className="w-[170px] h-[43px] bg-yellow-500 hover:bg-transparent duration-300 hover:text-white flex items-center justify-center border-white border-[2px] font-poppins font-bold text-[16px]"
-                                href="#"
-                            >
-                                FALE CONOSCO
-                            </a>
-                        </div>
+                    <div className="z-20 animation-div px-[1rem] w-full lg:p-[25px]  h-[450px] sm:h-[700px]  bg-transparent flex flex-col items-center justify-center gap-y-[15px]">
+                        <p className="text-[2rem] md:text-[2.5rem] xl:text-[60px] text-white font-poppins font-bold ">
+                            Construa seu imóvel na planta
+                        </p>
+                        <p className="font-montserrat  text-white text-[1rem] md:text-[1.25rem] lg:text-[20px] max-w-[1200px]">
+                            Nosso compromisso é oferecer um serviço de alta qualidade
+                            com agilidade, buscando sempre os melhores resultados no
+                            menor tempo possível e priorizando a relação
+                            custo-benefício ideal para o seu imóvel.
+                        </p>
+
+                        <a
+                            className="w-[170px] h-[43px] bg-blue-500 hover:bg-transparent duration-300 hover:text-white flex items-center justify-center border-white border-[2px] font-poppins font-bold text-[16px]"
+                            href="#"
+                        >
+                            FALE CONOSCO
+                        </a>
                     </div>
                 </SwiperSlide>
             </Swiper>

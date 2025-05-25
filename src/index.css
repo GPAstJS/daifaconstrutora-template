@@ -3,6 +3,7 @@
 @plugin "daisyui";
 
 @theme {
+    --breakpoint-xs: "33.75rem";
     --font-montserrat: 'Montserrat', 'sans-serif';
     --font-poppins: 'Poppins', 'sans-serif';
 }
@@ -48,4 +49,17 @@ h1 {
     button {
         background-color: #f9f9f9;
     }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.scale-animation {
+    animation: scaleUp 10s ease-in-out forwards;
 }
