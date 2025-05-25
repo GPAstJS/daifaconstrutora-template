@@ -14,7 +14,7 @@ export const Carousel = () => {
                 loop={true}
                 className="mySwiper w-full"
             >
-                <SwiperSlide className="mt-[140px] z-99">
+                <SwiperSlide  className="mt-[140px] z-99">
                     <div className="w-full bg-[#2F163B] flex flex-col items-center justify-center h-[450px] sm:h-[700px] ">
                         <div className="animation-div px-[1rem]  md:w-[95%]  bg-transparent flex flex-col items-center justify-center gap-y-[15px]">
                             <p className="text-[2rem] md:text-[2.5rem]  text-white font-poppins font-bold ">

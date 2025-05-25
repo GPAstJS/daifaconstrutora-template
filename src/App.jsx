@@ -60,17 +60,14 @@ function App() {
     ];
 
     return (
-        <main id="inicio" className="w-full  flex flex-col  2xl:items-center ">
+        <main id="inicio" className="w-full  flex flex-col  items-center ">
             <header className="w-full h-[140px] bg-white fixed z-10">
                 <Nav />
             </header>
 
             <Carousel />
 
-            <p
-                id="services"
-                className="font-montserrat py-[25px] flex flex-row gap-x-[5px] text-left font-bold text-[1.5rem] sm:text-[40px] px-[10px]"
-            >
+            <p id='services' className="scroll-m-[8rem] font-montserrat  py-[25px] flex flex-row gap-x-[5px] text-left font-bold text-[1.5rem] sm:text-[40px] px-[10px]">
                 Nossos{' '}
                 <span className="px-[5px] text-white bg-blue-500 rounded-[3px]">
                     Serviços
@@ -91,6 +88,15 @@ function App() {
                 </div>
             </div>
 
+            <p
+                id="about"
+                className="scroll-m-[8rem] font-montserrat py-[25px] flex flex-row gap-x-[5px] text-left font-bold text-[1.5rem] sm:text-[40px] px-[10px]"
+            >
+                Sobre{' '}
+                <span className="px-[5px] text-white bg-blue-500 rounded-[3px]">
+                    Nós
+                </span>
+            </p>
             <div
                 id="about"
                 className="w-full flex  justify-center flex-col md:flex-col xl:flex-row   xl:justify-center xl:items-center container mx-auto gap-x-[35px]"

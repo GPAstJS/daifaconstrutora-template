@@ -4,13 +4,13 @@ export const Form = () => {
     return (
         <form
             id="form"
-            className="w-full flex flex-col items-center justify-center bg-black py-[75px]"
+            className="scroll-m-[8rem] w-full flex flex-col items-center justify-center bg-black py-[35px]"
         >
             <p className="font-poppins text-[1.5rem] sm:text-[40px] font-bold bg-blue-500 px-[15px] rounded-[3px] text-white">
                 CONTATO
             </p>
 
-            <div className="w-full  flex flex-col-reverse md:flex-col-reverse 2xl:flex-col-reverse items-center justify-center  py-[50px] md:py-[15px]">
+            <div className="w-full  flex flex-col-reverse md:flex-col-reverse 2xl:flex-col-reverse items-center justify-center md:py-[15px]">
                 <div className="w-full md:w-[95%] 2xl:w-[50%] py-[25px] flex flex-col  items-center justify-center ">
 
 
@@ -44,7 +44,7 @@ export const Form = () => {
                     </div>
                 </div>
 
-                <div className="w-full md:w-[95%]  lg:w-[65%] 2xl:w-[50%] gap-y-[15px] flex flex-col  items-center justify-center px-[10px]">
+                <div className="w-full md:w-[95%]  lg:w-[65%] 2xl:w-[50%] gap-y-[15px] mt-[25px] flex flex-col  items-center justify-center px-[10px]">
 
 
                     <div className="w-full flex flex-col items-start gap-y-[10px]">
