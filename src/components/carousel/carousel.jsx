@@ -1,9 +1,7 @@
-import React from 'react';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import './style.css';
-import 'swiper/css/navigation';
 
 import SwiperImage from '../../assets/swiper-image.jpg';
 

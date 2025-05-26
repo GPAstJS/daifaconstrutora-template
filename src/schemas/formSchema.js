@@ -8,5 +8,8 @@ export const formSchema = yup.object().shape({
         .min(11, 'Mínimo de 11 dígitos!')
         .max(11, 'Máximo de 11 dígitos!')
         .required('O WhatsApp é obrigatório!'),
-    message: yup.string().required('A mensagem é obrigatória'),
+    message: yup
+        .string()
+        .min(25, 'Pelo menos 25 caracteres')
+        .required('A mensagem é obrigatória'),
 });

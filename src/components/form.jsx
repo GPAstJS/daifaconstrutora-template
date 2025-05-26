@@ -3,6 +3,27 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaMailBulk } from 'react-icons/fa';
 import { formSchema } from '../schemas/formSchema';
 
+import { Input } from './input';
+
+const inputs = [
+    {
+        name: 'nome',
+        placeholder: 'Nome',
+    },
+    {
+        name: 'email',
+        placeholder: 'E-mail',
+    },
+    {
+        name: 'whatsapp',
+        placeholder: 'WhatsApp',
+    },
+    {
+        name: 'message',
+        placeholder: 'Mensagem',
+    },
+];
+
 export const Form = () => {
     const {
         register,
@@ -61,77 +82,16 @@ export const Form = () => {
                 </div>
 
                 <div className="w-full md:w-[95%]  lg:w-[65%] 2xl:w-[50%] gap-y-[15px] mt-[25px] flex flex-col  items-center justify-center px-[10px]">
-                    <div className="w-full flex flex-col items-start gap-y-[10px]">
-                        <p className="text-[18px] text-white font-poppins">Nome</p>
-
-                        <input
-                            {...register('nome')}
-                            placeholder="Nome"
-                            className="h-[41px] w-full text-[18px] bg-white font-poppins outline-none px-[10px]"
-                            type="text"
-                        />
-
-                        {errors.nome && (
-                            <p className="text-red-500 text-[1rem] font-bol">
-                                {errors.nome.message}
-                            </p>
-                        )}
-                    </div>
-
-                    <div className="w-full flex flex-col items-start gap-y-[10px]">
-                        <p className="text-[18px] text-white font-poppins">
-                            WhatsApp
-                        </p>
-
-                        <input
-                            {...register('whatsapp')}
-                            placeholder="WhatsApp"
-                            className="h-[41px] w-full text-[18px] bg-white font-poppins outline-none px-[10px]"
-                            type="text"
-                        />
-
-                        {errors.whatsapp && (
-                            <p className="text-red-500 text-[1rem] font-bol">
-                                {errors.whatsapp.message}
-                            </p>
-                        )}
-                    </div>
-
-                    <div className="flex flex-col items-start w-full  gap-y-[10px]">
-                        <p className="text-[18px] text-white font-poppins">E-mail</p>
-
-                        <input
-                            {...register('email')}
-                            placeholder="E-mail"
-                            className="w-full h-[41px] text-[18px] bg-white font-poppins outline-none px-[10px]"
-                            type="text"
-                        />
-
-                        {errors.email && (
-                            <p className="text-red-500 text-[1rem] font-bol">
-                                {errors.email.message}
-                            </p>
-                        )}
-                    </div>
-
-                    <div className="flex flex-col items-start w-full  gap-y-[10px]">
-                        <p className="text-[18px] text-white font-poppins">
-                            Mensagem
-                        </p>
-
-                        <textarea
-                            {...register('message')}
-                            placeholder="Mensagem"
-                            className="w-full min-h-[41px]  max-h-[200px]  text-[18px] bg-white font-poppins outline-none p-[10px]"
-                            type="text"
-                        />
-
-                        {errors.message && (
-                            <p className="text-red-500 text-[1rem] font-bol">
-                                {errors.message.message}
-                            </p>
-                        )}
-                    </div>
+                    {inputs.map((e) => {
+                        return (
+                            <Input
+                                register={register}
+                                name={e.name}
+                                placeholder={e.placeholder}
+                                errors={errors}
+                            />
+                        );
+                    })}
 
                     <button
                         type="submit"

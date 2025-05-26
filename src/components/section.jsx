@@ -1,5 +1,3 @@
-import { BsGeoAltFill } from 'react-icons/bs';
-
 export const HeroSection = ({ title, text, icon }) => {
     return (
         <div className="flex flex-col items-center md:items-start  justifty-center md:flex-row">
