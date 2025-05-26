@@ -34,7 +34,7 @@ export const Carousel = () => {
 
                             <a
                                 className="w-[170px] h-[43px] bg-blue-500 hover:bg-transparent duration-300 hover:text-white flex items-center justify-center border-white border-[2px] font-poppins font-bold text-[16px]"
-                                href="#"
+                                href="#form"
                             >
                                 FALE CONOSCO
                             </a>
@@ -66,7 +66,7 @@ export const Carousel = () => {
 
                             <a
                                 className="w-[170px] h-[43px] bg-blue-500 hover:bg-transparent duration-300 hover:text-white flex items-center justify-center border-white border-[2px] font-poppins font-bold text-[16px]"
-                                href="#"
+                                href="#form"
                             >
                                 FALE CONOSCO
                             </a>
