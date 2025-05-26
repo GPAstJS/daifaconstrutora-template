@@ -1,22 +1,19 @@
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaMailBulk } from 'react-icons/fa';
+import { formSchema } from '../schemas/formSchema';
 
 export const Form = () => {
-    const { register, handleSubmit } = useForm();
-
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({
+        resolver: yupResolver(formSchema),
+    });
     const onSubmit = (data) => {
-        const { nome, email, whatsapp, message } = data;
-
-        const destinatario = 'gpastjs22@gmail.com';
-        const assunto = encodeURIComponent('Teste Formulário');
-
-        const corpo = encodeURIComponent(
-            `Nome: ${nome}\nE-mail: ${email}\nWhatsApp: ${whatsapp}\n\nMensagem:\n${message}`
-        );
-
-        const mailtoLink = `mailto:${destinatario}?subject=${assunto}&body=${corpo}`;
-
-        window.location.href = mailtoLink;
+        console.log(data);
+        alert('E-mail para contato fictício enviado!');
     };
 
     return (
@@ -47,7 +44,7 @@ export const Form = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-row gap-x-[10px]">
+                        <div className="flex flex-row items-center justify-between gap-x-[10px]">
                             <div className="w-[35px] h-[35px] sm:w-[50px] cursor-pointer sm:h-[50px] rounded-full flex items-center justify-center bg-blue-500">
                                 <FaFacebook className="h-[20px] w-[20px] sm:w-[24px] sm:h-[24px] fill-white" />
                             </div>
@@ -73,6 +70,12 @@ export const Form = () => {
                             className="h-[41px] w-full text-[18px] bg-white font-poppins outline-none px-[10px]"
                             type="text"
                         />
+
+                        {errors.nome && (
+                            <p className="text-red-500 text-[1rem] font-bol">
+                                {errors.nome.message}
+                            </p>
+                        )}
                     </div>
 
                     <div className="w-full flex flex-col items-start gap-y-[10px]">
@@ -86,6 +89,12 @@ export const Form = () => {
                             className="h-[41px] w-full text-[18px] bg-white font-poppins outline-none px-[10px]"
                             type="text"
                         />
+
+                        {errors.whatsapp && (
+                            <p className="text-red-500 text-[1rem] font-bol">
+                                {errors.whatsapp.message}
+                            </p>
+                        )}
                     </div>
 
                     <div className="flex flex-col items-start w-full  gap-y-[10px]">
@@ -97,6 +106,12 @@ export const Form = () => {
                             className="w-full h-[41px] text-[18px] bg-white font-poppins outline-none px-[10px]"
                             type="text"
                         />
+
+                        {errors.email && (
+                            <p className="text-red-500 text-[1rem] font-bol">
+                                {errors.email.message}
+                            </p>
+                        )}
                     </div>
 
                     <div className="flex flex-col items-start w-full  gap-y-[10px]">
@@ -110,6 +125,12 @@ export const Form = () => {
                             className="w-full min-h-[41px]  max-h-[200px]  text-[18px] bg-white font-poppins outline-none p-[10px]"
                             type="text"
                         />
+
+                        {errors.message && (
+                            <p className="text-red-500 text-[1rem] font-bol">
+                                {errors.message.message}
+                            </p>
+                        )}
                     </div>
 
                     <button

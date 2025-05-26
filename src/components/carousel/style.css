@@ -1,5 +1,4 @@
 @keyframes moveY {
-
     0% {
         transform: translateY(100%);
         opacity: 0;
@@ -9,10 +8,33 @@
         transform: translateY(0%);
         opacity: 100;
     }
-
 }
+
+/* div.swiper-button-prev {
+    width: 10px;
+    height: 10px;
+    fill: white
+} */
 
 .animation-div {
     animation-name: moveY;
     animation-duration: 1.5s;
+}
+
+.slide-indicator {
+    animation: bounce 1s infinite linear;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-20%);
+  }
+
+  50% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(-20%);
+  }
 }
