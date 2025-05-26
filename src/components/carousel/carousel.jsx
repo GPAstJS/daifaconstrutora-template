@@ -71,7 +71,7 @@ export const Carousel = () => {
                                 FALE CONOSCO
                             </a>
                         </div>
-                        <PiMouseLeftClickBold className="slide-indicator  w-[50px] h-[50px] 2xl:w-[50px] 2xl:h-[100px] absolute bottom-0 right-0 mx-[25px] text-white 100" />
+                        <PiMouseLeftClickBold className="slide-indicator text-white  w-[25px] h-[25px] 2xl:w-[50px] 2xl:h-[50px] absolute bottom-0 right-0 m-[25px] text-white2" />
                     </div>
                 </SwiperSlide>
             </Swiper>

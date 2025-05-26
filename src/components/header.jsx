@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { MdMenu } from 'react-icons/md';
 
 import Logo from '../assets/ultraconstrutora-logo.png';
+import { MobileHeader } from './mobileHeader';
 
 export const Header = () => {
     const [openMenuHeader, setOpenMenuHeader] = useState(false);
