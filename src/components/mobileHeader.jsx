@@ -1,6 +1,6 @@
 import { IoMdClose } from 'react-icons/io';
 
-export const MobileHeader = ({ openMenuHeader, setOpenMenuHeader }) => {
+export const MobileHeader = ({setOpenMenuHeader }) => {
     const links = [
         { href: '#inicio', text: 'Início' },
         { href: '#services', text: 'Nossos Serviços' },

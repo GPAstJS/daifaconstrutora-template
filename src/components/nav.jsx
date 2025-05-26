@@ -4,13 +4,13 @@ import { MdMenu } from 'react-icons/md';
 import { MobileHeader } from './mobileHeader';
 
 export const Nav = () => {
-    const [width, setWidth] = useState(window.innerWidth);
     const [openMenuHeader, setOpenMenuHeader] = useState(false);
-    
+
+    const [width, setWidth] = useState(window.innerWidth);
+
     useEffect(() => {
         function handleResize() {
             setWidth(window.innerWidth);
-            
         }
 
         window.addEventListener('resize', handleResize);
@@ -19,7 +19,6 @@ export const Nav = () => {
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-
 
     return (
         <nav className="relative flex h-[140px] flex-row justify-around items-center">
@@ -54,11 +53,14 @@ export const Nav = () => {
                     </div>
                 </div>
             ) : (
-                <MdMenu onClick={() => setOpenMenuHeader((prevValue) => !prevValue)} className="w-[50px] h-[50px]" />
+                <MdMenu
+                    onClick={() => setOpenMenuHeader((prevValue) => !prevValue)}
+                    className="w-[50px] h-[50px]"
+                />
             )}
 
             {openMenuHeader && width <= 639 && (
-                <MobileHeader openMenuHeader={openMenuHeader} setOpenMenuHeader={setOpenMenuHeader}/>
+                <MobileHeader setOpenMenuHeader={setOpenMenuHeader} />
             )}
         </nav>
     );

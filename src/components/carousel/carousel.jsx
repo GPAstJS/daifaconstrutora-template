@@ -1,7 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import './style.css';
+import 'swiper/css/navigation';
 
 import SwiperImage from '../../assets/swiper-image.jpg';
 
@@ -12,12 +14,15 @@ export const Carousel = () => {
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
-                className="mySwiper w-full"
+                autoplay={{ delay: 5000 }}
+                navigation={true}
+                modules={[Navigation, Autoplay]}
+                className="mySwiper w-full cursor-pointer "
             >
-                <SwiperSlide  className="mt-[140px] z-99">
+                <SwiperSlide className="mt-[140px]  z-99">
                     <div className="w-full bg-[#2F163B] flex flex-col items-center justify-center h-[450px] sm:h-[700px] ">
                         <div className="animation-div px-[1rem]  md:w-[95%]  bg-transparent flex flex-col items-center justify-center gap-y-[15px]">
-                            <p className="text-[2rem] md:text-[2.5rem]  text-white font-poppins font-bold ">
+                            <p className="text-[2rem] md:text-[2.5rem] xl:text-[60px]  text-white font-poppins font-bold ">
                                 Construa seu imóvel na planta
                             </p>
                             <p className="font-montserrat  text-white text-[1rem] md:text-[1.25rem] lg:text-[20px] max-w-[1200px]       ">

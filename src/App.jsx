@@ -1,12 +1,6 @@
 import './App.css';
-import { CTA } from './components/cta';
-import { Nav } from './components/nav';
 
 import Logo from './assets/ultraconstrutora-logo.png';
-import SeuConteudo from './assets/image.jpg';
-import { Carousel } from './components/carousel/carousel';
-import { HeroSection } from './components/section';
-import { Form } from './components/form';
 
 import CTA1 from './assets/CTA-image1.jpg';
 import CTA2 from './assets/CTA-image2.jpg';
@@ -16,6 +10,14 @@ import CTA4 from './assets/CTA-image4.jpg';
 import { FaCrosshairs } from 'react-icons/fa';
 import { FaBinoculars } from 'react-icons/fa';
 import { FaCertificate } from 'react-icons/fa6';
+import { Nav } from './components/nav';
+
+import { Carousel } from './components/carousel/carousel';
+import { CTA } from './components/cta';
+import { HeroSection } from './components/section';
+
+import SeuConteudo from './assets/image.jpg';
+import { Form } from './components/form';
 
 function App() {
     const CTAs = [
@@ -67,7 +69,10 @@ function App() {
 
             <Carousel />
 
-            <p id='services' className="scroll-m-[8rem] font-montserrat  py-[25px] flex flex-row gap-x-[5px] text-left font-bold text-[1.5rem] sm:text-[40px] px-[10px]">
+            <p
+                id="services"
+                className="scroll-m-[8rem] font-montserrat  py-[25px] flex flex-row gap-x-[5px] text-left font-bold text-[1.5rem] sm:text-[40px] px-[10px]"
+            >
                 Nossos{' '}
                 <span className="px-[5px] text-white bg-blue-500 rounded-[3px]">
                     Serviços
@@ -101,7 +106,7 @@ function App() {
                 id="about"
                 className="w-full flex  justify-center flex-col md:flex-col xl:flex-row   xl:justify-center xl:items-center container mx-auto gap-x-[35px]"
             >
-                <div className=" flex flex-col items-start md:items-center xl:w-[45%]  p-[10px] gap-y-[10px]">
+                <div className=" flex flex-col items-center md:items-center xl:w-[45%]  p-[10px] gap-y-[10px]">
                     <img src={SeuConteudo} alt="Imagem aqui" />
 
                     <p className="font-bold font-poppins text-center md:text-left text-[1.5rem] sm:text-[30px]">
@@ -120,6 +125,7 @@ function App() {
                     {heroes.map((e, i) => {
                         return (
                             <HeroSection
+                                key={i}
                                 icon={e.icon}
                                 title={e.title}
                                 text={e.text}
